@@ -598,7 +598,7 @@ export default [
   "Landorus Therian",
   "Lanturn",
   "Lapras",
-  "Lapras",
+  "Lapras Mega",
   "Larvesta",
   "Larvitar",
   "Latias",
