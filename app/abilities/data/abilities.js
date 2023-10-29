@@ -154,6 +154,7 @@ export default [
   "Pressure",
   "Primal Armor",
   "Primordial Sea",
+  "Prism Armor",
   "Protean",
   "Protosynthesis",
   "Psychic Surge",
