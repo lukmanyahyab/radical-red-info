@@ -27,10 +27,17 @@ const Abilities: React.FC = () => {
   useEffect(() => {
     const pokemons = localStorage.getItem("pokemons") || "[]"; // Get Pokemon From Local Storage
     if (pokemons.length > 2) setRows(JSON.parse(pokemons)); // Set Table Rows From Local Storage
+
+    document.addEventListener("keypress", function (e) {
+      if (e.shiftKey && e.key == "Enter") {
+        document.getElementById("search")?.focus();
+      }
+    });
   }, []);
 
   useEffect(() => {
     localStorage.setItem("pokemons", JSON.stringify(rows)); // Update Local Storage If Rows Changes
+    document.getElementsByName("species")[0].focus();
   }, [rows]);
 
   function generateId() {
@@ -101,6 +108,7 @@ const Abilities: React.FC = () => {
 
   function handleFocusOut(e: React.FocusEvent<HTMLInputElement>) {
     const { value, name } = e.target;
+    if (!value) return;
     let data = name === "species" ? findData(species, value) : findData(abilities, value);
     setForm((prev) => ({ ...prev, [name]: data || prev[name as keyof FormState] }));
   }
@@ -113,10 +121,8 @@ const Abilities: React.FC = () => {
   return (
     <>
       <button
-        className="absolute right-4 bg-red-500 hover:bg-red-600 text-white p-2 rounded-xl"
-        onClick={() => {
-          if (confirm("Are you sure?")) setRows([]);
-        }}
+        className="absolute right-4 top-4 bg-red-500 hover:bg-red-600 text-white p-2 rounded-xl"
+        onClick={() => (confirm("Are you sure?") ? setRows([]) : null)}
       >
         Delete All
       </button>
@@ -161,9 +167,13 @@ const Abilities: React.FC = () => {
         <DataList data={species} id="species" />
       </Form>
       <Search search={search} handleSearch={handleSearch} />
-      <Table>
-        <TableRows rows={rowsData} handleDelete={handleDelete} handleEdit={handleEdit} />
-      </Table>
+      {rows.length ? (
+        <Table>
+          <TableRows rows={rowsData} handleDelete={handleDelete} handleEdit={handleEdit} />
+        </Table>
+      ) : (
+        <h1 className="m-auto text-center font-bold rounded bg-red-600 max-w-xs">No Entries</h1>
+      )}
 
       <div
         className="fixed inset-0 bg-slate-900/80 flex items-center backdrop-FocusOut-sm"

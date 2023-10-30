@@ -7,7 +7,7 @@ type Props = {
 const Button = ({ children, style, handleClick }: Props) => {
   return (
     <button
-      className={`py-[0.45rem] px-4 rounded-lg border-0 text-white self-end ${style.bg} ${style.hover}`}
+      className={`py-[0.25rem] px-3 rounded-lg border-0 text-white self-end ${style.bg} ${style.hover}`}
       onClick={handleClick}
     >
       {children}

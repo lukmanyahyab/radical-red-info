@@ -14,7 +14,7 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="bg-white text-black py-2 mb-4 relative">
+    <nav className="bg-white text-black p-2 mb-2 relative w-fit m-auto rounded-b-2xl">
       <ul className="flex gap-8 justify-center [&>*:hover]:bg-slate-200 [&>*]:py-1 [&>*]:px-2 [&>*]:transition [&>*]:duration-200 [&>*]:rounded [&>*]:font-semibold">
         {links.map((link, i) => (
           <li className={pathname == link.href ? "bg-slate-200" : ""} key={i}>

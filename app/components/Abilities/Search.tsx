@@ -10,8 +10,9 @@ const Search = ({ search, handleSearch }: Props) => {
         type="text"
         value={search}
         onChange={handleSearch}
-        placeholder="Search for species or ability..."
+        placeholder="Search for species or ability (Shift+Enter)"
         className="min-w-[25%]"
+        id="search"
       />
     </div>
   );
