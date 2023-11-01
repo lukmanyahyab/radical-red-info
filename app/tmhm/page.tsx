@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import tmhms from "./data/thmh";
+import Table from "../components/Table";
 
 const TmHm = () => {
   const [search, setSearch] = useState("");
@@ -39,24 +40,15 @@ const TmHm = () => {
           id="search"
         />
       </div>
-      <table className="border-collapse bg-white text-black rounded-lg overflow-hidden text-center m-auto min-w-[75%]">
-        <thead>
+      <Table columns={["Entries", "Move", "Location"]}>
+        {rowsData.map((row) => (
           <tr>
-            <th>Entries</th>
-            <th>Name</th>
-            <th>Location</th>
+            <td>{getText(row.entries)}</td>
+            <td>{getText(row.name)}</td>
+            <td>{getText(row.location)}</td>
           </tr>
-        </thead>
-        <tbody>
-          {rowsData.map((row) => (
-            <tr>
-              <td>{getText(row.entries)}</td>
-              <td>{getText(row.name)}</td>
-              <td>{getText(row.location)}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+        ))}
+      </Table>
     </>
   );
 };

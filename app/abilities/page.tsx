@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Form from "../components/Abilities/Form";
 import Input from "../components/Abilities/Input";
-import Table from "../components/Abilities/Table";
+import Table from "../components/Table";
 import TableRows from "../components/Abilities/TableRows";
 import Button from "../components/Abilities/Button";
 import Search from "../components/Abilities/Search";
@@ -161,7 +161,7 @@ const Abilities: React.FC = () => {
         handleSearch={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s]/gi, ""))}
       />
       {rows.length ? (
-        <Table>
+        <Table columns={["Entries", "Species", "Regular Ability", "Hidden Ability", "Options"]}>
           <TableRows
             rows={rows}
             handleDelete={handleDelete}

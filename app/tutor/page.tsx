@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import tutors from "./data/tutor";
+import Table from "../components/Table";
 
 const Tutor = () => {
   const [search, setSearch] = useState("");
@@ -45,26 +46,16 @@ const Tutor = () => {
           id="search"
         />
       </div>
-      <table className="border-collapse bg-white text-black rounded-lg overflow-hidden text-center m-auto min-w-[75%]">
-        <thead>
+      <Table columns={["Move", "From", "Location", "Price"]}>
+        {rowsData.map((row) => (
           <tr>
-            <th>Move</th>
-            <th>From</th>
-            <th>Location</th>
-            <th>Price</th>
+            <td>{getText(row.move)}</td>
+            <td>{getText(row.from)}</td>
+            <td>{getText(row.location)}</td>
+            <td>{getText(row.price)}</td>
           </tr>
-        </thead>
-        <tbody>
-          {rowsData.map((row) => (
-            <tr>
-              <td>{getText(row.move)}</td>
-              <td>{getText(row.from)}</td>
-              <td>{getText(row.location)}</td>
-              <td>{getText(row.price)}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+        ))}
+      </Table>
     </>
   );
 };

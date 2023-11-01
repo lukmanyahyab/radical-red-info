@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import stones from "./data/stones";
+import Table from "../components/Table";
 
 const MegaStones = () => {
   const [search, setSearch] = useState("");
@@ -40,22 +41,14 @@ const MegaStones = () => {
           id="search"
         />
       </div>
-      <table className="border-collapse bg-white text-black rounded-lg overflow-hidden text-center m-auto">
-        <thead>
+      <Table columns={["Name", "Location"]}>
+        {rowsData.map((row) => (
           <tr>
-            <th>Name</th>
-            <th>Location</th>
+            <td>{getText(row.name)}</td>
+            <td>{getText(row.location)}</td>
           </tr>
-        </thead>
-        <tbody>
-          {rowsData.map((row) => (
-            <tr>
-              <td>{getText(row.name)}</td>
-              <td>{getText(row.location)}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+        ))}
+      </Table>
     </>
   );
 };
