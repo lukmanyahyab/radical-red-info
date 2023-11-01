@@ -20,7 +20,7 @@ const Input = ({
   handleFocusOut,
 }: Props) => {
   return (
-    <div className="flex flex-col items-center gap-1 -my-2">
+    <div className="flex flex-col items-center gap-1">
       <label className="font-medium">{label}</label>
       <input
         list={list}
