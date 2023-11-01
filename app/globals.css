@@ -34,7 +34,6 @@ td,
 th {
   padding: 0.1rem 0.5rem;
   border: 1px solid black;
-  text-transform: capitalize;
   font-weight: 600;
 }
 

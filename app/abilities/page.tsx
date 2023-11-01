@@ -113,10 +113,7 @@ const Abilities: React.FC = () => {
     setForm((prev) => ({ ...prev, [name]: data || prev[name as keyof FormState] }));
   }
 
-  const rowsData = rows.slice().filter((row) => {
-    const keyword = new RegExp(search, "i");
-    return keyword.test(row.species) || keyword.test(row.regular) || keyword.test(row.hidden);
-  });
+  const validSearch = search.replace(/[^a-z0-9\s]/gi, "");
 
   return (
     <>
@@ -143,7 +140,7 @@ const Abilities: React.FC = () => {
           name="regular"
           handleChange={handleChange}
           handleFocusOut={handleFocusOut}
-          placeholder="eg: Huge Power"
+          placeholder="ex: Huge Power"
           value={form.regular}
           required={false}
         />
@@ -153,7 +150,7 @@ const Abilities: React.FC = () => {
           name="hidden"
           handleChange={handleChange}
           handleFocusOut={handleFocusOut}
-          placeholder="eg: Feline Prowess"
+          placeholder="ex: Feline Prowess"
           value={form.hidden}
           required={false}
         />
@@ -166,10 +163,15 @@ const Abilities: React.FC = () => {
         <DataList data={abilities} id="abilities" />
         <DataList data={species} id="species" />
       </Form>
-      <Search search={search} handleSearch={handleSearch} />
+      <Search search={validSearch} handleSearch={handleSearch} />
       {rows.length ? (
         <Table>
-          <TableRows rows={rowsData} handleDelete={handleDelete} handleEdit={handleEdit} />
+          <TableRows
+            rows={rows}
+            handleDelete={handleDelete}
+            handleEdit={handleEdit}
+            search={validSearch}
+          />
         </Table>
       ) : (
         <h1 className="m-auto text-center font-bold rounded bg-red-600 max-w-xs">No Entries</h1>
@@ -200,7 +202,7 @@ const Abilities: React.FC = () => {
               name="regular"
               handleChange={handleChange}
               handleFocusOut={handleFocusOut}
-              placeholder="eg: Huge Power"
+              placeholder="ex: Huge Power"
               value={form.regular}
               required={false}
             />
@@ -210,7 +212,7 @@ const Abilities: React.FC = () => {
               name="hidden"
               handleChange={handleChange}
               handleFocusOut={handleFocusOut}
-              placeholder="eg: Feline Prowess"
+              placeholder="ex: Feline Prowess"
               value={form.hidden}
               required={false}
             />

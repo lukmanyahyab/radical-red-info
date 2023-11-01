@@ -5,13 +5,13 @@ type Props = {
 
 const Search = ({ search, handleSearch }: Props) => {
   return (
-    <div className="flex justify-center mb-4">
+    <div className="mb-4 flex justify-center">
       <input
         type="text"
-        value={search}
+        value={search.replace(/[^a-z0-9\s]/gi, "")}
         onChange={handleSearch}
-        placeholder="Search for species or ability (Shift+Enter)"
-        className="min-w-[25%]"
+        placeholder="Search for species or ability... (Shift + Enter)"
+        className="w-1/3"
         id="search"
       />
     </div>
