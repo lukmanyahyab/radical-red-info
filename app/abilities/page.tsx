@@ -96,11 +96,6 @@ const Abilities: React.FC = () => {
     }
   }
 
-  function handleSearch(e: React.ChangeEvent<HTMLInputElement>) {
-    const { value } = e.target;
-    setSearch(value);
-  }
-
   function findData(datalist: string[], keyword: string) {
     const rules = new RegExp(`${keyword}`, "i");
     return datalist.find((data) => data.match(rules));
@@ -112,8 +107,6 @@ const Abilities: React.FC = () => {
     let data = name === "species" ? findData(species, value) : findData(abilities, value);
     setForm((prev) => ({ ...prev, [name]: data || prev[name as keyof FormState] }));
   }
-
-  const validSearch = search.replace(/[^a-z0-9\s]/gi, "");
 
   return (
     <>
@@ -163,14 +156,17 @@ const Abilities: React.FC = () => {
         <DataList data={abilities} id="abilities" />
         <DataList data={species} id="species" />
       </Form>
-      <Search search={validSearch} handleSearch={handleSearch} />
+      <Search
+        search={search}
+        handleSearch={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s]/gi, ""))}
+      />
       {rows.length ? (
         <Table>
           <TableRows
             rows={rows}
             handleDelete={handleDelete}
             handleEdit={handleEdit}
-            search={validSearch}
+            search={search}
           />
         </Table>
       ) : (
