@@ -2,13 +2,14 @@
 import { useState } from "react";
 import tmhms from "./data/thmh";
 import Table from "../components/Table";
+import Search from "../components/Search";
 
 const TmHm = () => {
   const [search, setSearch] = useState("");
 
   const rowsData = tmhms.filter((tmhm) => {
     const keyword = new RegExp(search, "i");
-    return keyword.test(tmhm.entries) || keyword.test(tmhm.name) || keyword.test(tmhm.location);
+    return keyword.test(tmhm.entries) || keyword.test(tmhm.move) || keyword.test(tmhm.location);
   });
 
   function getText(text: string) {
@@ -30,21 +31,16 @@ const TmHm = () => {
   }
   return (
     <>
-      <div className="my-4 flex justify-center">
-        <input
-          type="text"
-          value={search}
-          onChange={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s]/gi, ""))}
-          placeholder="Search for TM or HM... (Shift + Enter)"
-          className="w-1/3"
-          id="search"
-        />
-      </div>
-      <Table columns={["Entries", "Move", "Location"]}>
+      <Search
+        search={search}
+        placeholder="Search for TM or HM... (Shift + Enter)"
+        handleSearch={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s]/gi, ""))}
+      />
+      <Table columns={["Entries", "Moves", "Locations"]}>
         {rowsData.map((row) => (
           <tr>
             <td>{getText(row.entries)}</td>
-            <td>{getText(row.name)}</td>
+            <td>{getText(row.move)}</td>
             <td>{getText(row.location)}</td>
           </tr>
         ))}

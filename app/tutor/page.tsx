@@ -2,18 +2,14 @@
 import { useState } from "react";
 import tutors from "./data/tutor";
 import Table from "../components/Table";
+import Search from "../components/Search";
 
 const Tutor = () => {
   const [search, setSearch] = useState("");
 
   const rowsData = tutors.filter((tutor) => {
     const keyword = new RegExp(search, "i");
-    return (
-      keyword.test(tutor.move) ||
-      keyword.test(tutor.from) ||
-      keyword.test(tutor.location) ||
-      keyword.test(tutor.price)
-    );
+    return keyword.test(tutor.move) || keyword.test(tutor.location);
   });
 
   function getText(text: string) {
@@ -36,23 +32,18 @@ const Tutor = () => {
 
   return (
     <>
-      <div className="my-4 flex justify-center">
-        <input
-          type="text"
-          value={search}
-          onChange={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s]/gi, ""))}
-          placeholder="Search for stone or location... (Shift + Enter)"
-          className="w-1/3"
-          id="search"
-        />
-      </div>
-      <Table columns={["Move", "From", "Location", "Price"]}>
+      <Search
+        search={search}
+        placeholder="Search for move or location... (Shift + Enter)"
+        handleSearch={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s]/gi, ""))}
+      />
+      <Table columns={["Moves", "From", "Locations", "Prices"]}>
         {rowsData.map((row) => (
           <tr>
             <td>{getText(row.move)}</td>
-            <td>{getText(row.from)}</td>
+            <td>{row.from}</td>
             <td>{getText(row.location)}</td>
-            <td>{getText(row.price)}</td>
+            <td>{row.price}</td>
           </tr>
         ))}
       </Table>

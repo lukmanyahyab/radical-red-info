@@ -2,6 +2,7 @@
 import { useState } from "react";
 import stones from "./data/stones";
 import Table from "../components/Table";
+import Search from "../components/Search";
 
 const MegaStones = () => {
   const [search, setSearch] = useState("");
@@ -31,17 +32,12 @@ const MegaStones = () => {
 
   return (
     <>
-      <div className="my-4 flex justify-center">
-        <input
-          type="text"
-          value={search}
-          onChange={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s]/gi, ""))}
-          placeholder="Search for stone or location... (Shift + Enter)"
-          className="w-1/3"
-          id="search"
-        />
-      </div>
-      <Table columns={["Name", "Location"]}>
+      <Search
+        search={search}
+        placeholder="Search for stone or location... (Shift + Enter)"
+        handleSearch={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s]/gi, ""))}
+      />
+      <Table columns={["Stones", "Locations"]}>
         {rowsData.map((row) => (
           <tr>
             <td>{getText(row.name)}</td>

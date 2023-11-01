@@ -5,7 +5,7 @@ type Props = {
 
 const Table = ({ columns, children }: Props) => {
   return (
-    <table className="border-collapse bg-white text-black rounded-lg overflow-hidden text-center m-auto">
+    <table className="border-collapse bg-white text-black rounded-lg overflow-hidden m-auto">
       <thead>
         <tr>
           {columns.map((column) => (
