@@ -9,7 +9,7 @@ const TmHm = () => {
 
   const rowsData = tmhms.filter((tmhm) => {
     const keyword = new RegExp(search, "i");
-    return keyword.test(tmhm.entries) || keyword.test(tmhm.move) || keyword.test(tmhm.location);
+    return keyword.test(tmhm.move) || keyword.test(tmhm.type) || keyword.test(tmhm.location);
   });
 
   function getText(text: string) {
@@ -33,14 +33,15 @@ const TmHm = () => {
     <>
       <Search
         search={search}
-        placeholder="Search for TM or HM... (Shift + Enter)"
+        placeholder="Search for move, type, or location... (Shift + Enter)"
         handleSearch={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s]/gi, ""))}
       />
-      <Table columns={["Entries", "Moves", "Locations"]}>
+      <Table columns={["Entries", "Moves", "Type", "Locations"]}>
         {rowsData.map((row) => (
           <tr>
             <td>{getText(row.entries)}</td>
             <td>{getText(row.move)}</td>
+            <td>{getText(row.type)}</td>
             <td>{getText(row.location)}</td>
           </tr>
         ))}

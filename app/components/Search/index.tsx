@@ -11,6 +11,7 @@ const Search = ({ search, placeholder, handleSearch }: Props) => {
         type="text"
         value={search}
         onChange={handleSearch}
+        onClick={(e: any) => e.target.select()}
         placeholder={placeholder}
         className="w-1/3"
         id="search"

@@ -57,6 +57,7 @@ export default [
   "Electromorphosis",
   "Emergency Exit",
   "Fairy Aura",
+  "Fatal Precision",
   "Feline Prowess",
   "Flame Body",
   "Flaming Soul",
