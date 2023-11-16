@@ -13,6 +13,7 @@ body {
   background-color: #202020;
   color: #fff;
   padding-bottom: 2rem;
+  padding-inline: 5%;
 }
 
 input {

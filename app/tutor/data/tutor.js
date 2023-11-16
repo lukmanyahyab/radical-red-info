@@ -1,314 +1,366 @@
 export default [
   {
+    move: "Bug Bite",
+    type: "Bug",
     location: "Viridian Forest",
     from: "Bug Catcher",
-    move: "Bug Bite",
     price: "Oran Berry"
   },
   {
-    location: "Pewter City’s Museum",
-    from: "Scientist",
     move: "Stomping Tantrum",
+    type: "Ground",
+    location: "Pewter City's museum (Cut HM required)",
+    from: "Scientist",
     price: "Free"
   },
   {
-    location: "Vermilion City’s Fanclub",
-    from: "Tamer",
     move: "Fire Punch",
+    type: "Fire",
+    location: "Vermilion City's fanclub",
+    from: "Tamer",
     price: "$2,500"
   },
   {
-    location: "Vermilion City’s Fanclub",
-    from: "Tamer",
     move: "Ice Punch",
+    type: "Ice",
+    location: "Vermilion City's fanclub",
+    from: "Tamer",
     price: "$2,500"
   },
   {
-    location: "Vermilion City’s Fanclub",
-    from: "Tamer",
     move: "Thunder Punch",
+    type: "Electric",
+    location: "Vermilion City's fanclub",
+    from: "Tamer",
     price: "$2,500"
   },
   {
-    location: "Vermilion City’s Fanclub",
-    from: "Tamer",
     move: "Fire Fang",
+    type: "Fire",
+    location: "Vermilion City's fanclub",
+    from: "Tamer",
     price: "$2,500"
   },
   {
-    location: "Vermilion City’s Fanclub",
-    from: "Tamer",
     move: "Ice Fang",
+    type: "Ice",
+    location: "Vermilion City's fanclub",
+    from: "Tamer",
     price: "$2,500"
   },
   {
-    location: "Vermilion City’s Fanclub",
-    from: "Tamer",
     move: "Thunder Fang",
+    type: "Electric",
+    location: "Vermilion City's fanclub",
+    from: "Tamer",
     price: "$2,500"
   },
   {
-    location: "Vermilion City’s Fanclub",
+    move: "Psychic Fangs",
+    type: "Psychic",
+    location: "Vermilion City's fanclub",
     from: "Tamer",
-    move: "Psychic Fang",
     price: "$2,500"
   },
   {
-    location: "Celadon City’s Department Store 3F",
-    from: "Tamer",
     move: "Play Rough",
+    type: "Fairy",
+    location: "Celadon City's Department Store 3F",
+    from: "Tamer",
     price: "Free for the first time, $5,000 afterwards"
   },
   {
-    location: "Celadon City’s Restaurant",
-    from: "Tamer",
     move: "Iron Head",
-    price: "Free"
-  },
-  {
-    location: "Saffron City - Mr.Psychic’c House",
+    type: "Steel",
+    location: "Celadon City's restaurant",
     from: "Tamer",
-    move: "Liquidation",
-    price: "$7,500"
-  },
-  {
-    location: "Saffron City - House Left of Silph Co.",
-    from: "Ace Trainer",
-    move: "Hydro Pump",
-    price: "$7,500"
-  },
-  {
-    location: "Saffron City - House Left of Silph Co.",
-    from: "Ace Trainer",
-    move: "Drill Run",
-    price: "$7,500"
-  },
-  {
-    location: "Saffron City - House Left of Silph Co.",
-    from: "Ace Trainer",
-    move: "Blaze Kick",
-    price: "$7,500"
-  },
-  {
-    location: "Saffron City - House Left of Silph Co.",
-    from: "Ace Trainer",
-    move: "Pain Split",
-    price: "$7,500"
-  },
-  {
-    location: "Saffron City - House Left of Silph Co.",
-    from: "Ace Trainer",
-    move: "Zen Headbutt",
-    price: "$7,500"
-  },
-  {
-    location: "Saffron City - House Left of Silph Co.",
-    from: "Ace Trainer",
-    move: "Weather Ball",
-    price: "$7,500"
-  },
-  {
-    location: "Saffron City - House Left of Silph Co.",
-    from: "Ace Trainer",
-    move: "Air Slash",
-    price: "$7,500"
-  },
-  {
-    location: "Saffron City - House Left of Silph Co.",
-    from: "Ace Trainer",
-    move: "Hex",
-    price: "$7,500"
-  },
-  {
-    location: "Saffron City - House Left of Silph Co.",
-    from: "Ace Trainer",
-    move: "Mystical Fire",
-    price: "$7,500"
-  },
-  {
-    location: "Saffron City - House Left of Silph Co.",
-    from: "Ace Trainer",
-    move: "Seed Bomb",
-    price: "$7,500"
-  },
-  {
-    location: "Saffron City - House Left of Silph Co.",
-    from: "Ace Trainer",
-    move: "Leaf Blade",
-    price: "$7,500"
-  },
-  {
-    location: "Saffron City - House Left of Silph Co.",
-    from: "Ace Trainer",
-    move: "Knock Off",
-    price: "$7,500"
-  },
-  {
-    location: "Saffron City - House Left of Silph Co.",
-    from: "Ace Trainer",
-    move: "Power Gem",
-    price: "$7,500"
-  },
-  {
-    location: "Saffron City - House Left of Silph Co.",
-    from: "Ace Trainer",
-    move: "Rock Blast",
-    price: "$7,500"
-  },
-  {
-    location: "Saffron City - House Left of Silph Co.",
-    from: "Ace Trainer",
-    move: "Pin Missile",
-    price: "$7,500"
-  },
-  {
-    location: "Saffron City - House Left of Silph Co.",
-    from: "Ace Trainer",
-    move: "Icicle Spear",
-    price: "$7,500"
-  },
-  {
-    location: "Saffron City - House Left of Silph Co.",
-    from: "Ace Trainer",
-    move: "Tail Slap",
-    price: "$7,500"
-  },
-  {
-    location: "Saffron City - House Left of Silph Co.",
-    from: "Ace Trainer",
-    move: "Body Slam",
-    price: "$7,500"
-  },
-  {
-    location: "Saffron City - House Left of Silph Co.",
-    from: "Ace Trainer",
-    move: "Foul Play",
-    price: "$7,500"
-  },
-  {
-    location: "Saffron City - House Left of Silph Co.",
-    from: "Ace Trainer",
-    move: "Iron Defense",
-    price: "$7,500"
-  },
-  {
-    location: "Fuchsia City’s Right Gate",
-    from: "Super Nerd",
-    move: "Nasty Plot",
     price: "Free"
   },
   {
+    move: "Liquidation",
+    type: "Water",
+    location: "Saffron City - Mr. Psychic'c house",
+    from: "Tamer",
+    price: "Free for the first time, $7, 500 afterwards"
+  },
+  {
+    move: "Hydro Pump",
+    type: "Water",
+    location: "Saffron City - House left of Silph Co.",
+    from: "Ace Trainer",
+    price: "$7,500"
+  },
+  {
+    move: "Drill Run",
+    type: "Ground",
+    location: "Saffron City - House left of Silph Co.",
+    from: "Ace Trainer",
+    price: "$7,500"
+  },
+  {
+    move: "Blaze Kick",
+    type: "Fire",
+    location: "Saffron City - House left of Silph Co.",
+    from: "Ace Trainer",
+    price: "$7,500"
+  },
+  {
+    move: "Pain Split",
+    type: "Normal",
+    location: "Saffron City - House left of Silph Co.",
+    from: "Ace Trainer",
+    price: "$7,500"
+  },
+  {
+    move: "Zen Headbutt",
+    type: "Psychic",
+    location: "Saffron City - House left of Silph Co.",
+    from: "Ace Trainer",
+    price: "$7,500"
+  },
+  {
+    move: "Weather Ball",
+    type: "Normal",
+    location: "Saffron City - House left of Silph Co.",
+    from: "Ace Trainer",
+    price: "$7,500"
+  },
+  {
+    move: "Air Slash",
+    type: "Flying",
+    location: "Saffron City - House left of Silph Co.",
+    from: "Ace Trainer",
+    price: "$7,500"
+  },
+  {
+    move: "Hex",
+    type: "Ghost",
+    location: "Saffron City - House left of Silph Co.",
+    from: "Ace Trainer",
+    price: "$7,500"
+  },
+  {
+    move: "Mystical Fire",
+    type: "Fire",
+    location: "Saffron City - House left of Silph Co.",
+    from: "Ace Trainer",
+    price: "$7,500"
+  },
+  {
+    move: "Seed Bomb",
+    type: "Grass",
+    location: "Saffron City - House left of Silph Co.",
+    from: "Ace Trainer",
+    price: "$7,500"
+  },
+  {
+    move: "Leaf Blade",
+    type: "Grass",
+    location: "Saffron City - House left of Silph Co.",
+    from: "Ace Trainer",
+    price: "$7,500"
+  },
+  {
+    move: "Knock Off",
+    type: "Dark",
+    location: "Saffron City - House left of Silph Co.",
+    from: "Ace Trainer",
+    price: "$7,500"
+  },
+  {
+    move: "Power Gem",
+    type: "Rock",
+    location: "Saffron City - House left of Silph Co.",
+    from: "Ace Trainer",
+    price: "$7,500"
+  },
+  {
+    move: "Rock Blast",
+    type: "Rock",
+    location: "Saffron City - House left of Silph Co.",
+    from: "Ace Trainer",
+    price: "$7,500"
+  },
+  {
+    move: "Pin Missile",
+    type: "Bug",
+    location: "Saffron City - House left of Silph Co.",
+    from: "Ace Trainer",
+    price: "$7,500"
+  },
+  {
+    move: "Icicle Spear",
+    type: "Ice",
+    location: "Saffron City - House left of Silph Co.",
+    from: "Ace Trainer",
+    price: "$7,500"
+  },
+  {
+    move: "Tail Slap",
+    type: "Normal",
+    location: "Saffron City - House left of Silph Co.",
+    from: "Ace Trainer",
+    price: "$7,500"
+  },
+  {
+    move: "Body Slam",
+    type: "Normal",
+    location: "Saffron City - House left of Silph Co.",
+    from: "Ace Trainer",
+    price: "$7,500"
+  },
+  {
+    move: "Foul Play",
+    type: "Dark",
+    location: "Saffron City - House left of Silph Co.",
+    from: "Ace Trainer",
+    price: "$7,500"
+  },
+  {
+    move: "Iron Defense",
+    type: "Steel",
+    location: "Saffron City - House left of Silph Co.",
+    from: "Ace Trainer",
+    price: "$7,500"
+  },
+  {
+    move: "Nasty Plot",
+    type: "Dark",
+    location: "Fuchsia City's right gate",
+    from: "Super Nerd",
+    price: "Free"
+  },
+  {
+    move: "Earth Power",
+    type: "Ground",
     location: "Fuchsia City",
     from: "Hiker",
-    move: "Earth Power",
     price: "Free the first time, $10,000 afterwards"
   },
   {
-    location: "Cinnabar Island’s Pokémon Lab",
-    from: "Super Nerd",
     move: "Aura Sphere",
+    type: "Fighting",
+    location: "Cinnabar Island's Pokémon Lab",
+    from: "Super Nerd",
     price: "$10,000"
   },
   {
-    location: "Cinnabar Island’s Pokémon Lab",
-    from: "Super Nerd",
     move: "Heat Wave",
+    type: "Fire",
+    location: "Cinnabar Island's Pokémon Lab",
+    from: "Super Nerd",
     price: "$10,000"
   },
   {
-    location: "Cinnabar Island’s Pokémon Lab",
-    from: "Super Nerd",
     move: "Hurricane",
+    type: "Flying",
+    location: "Cinnabar Island's Pokémon Lab",
+    from: "Super Nerd",
     price: "$10,000"
   },
   {
-    location: "Cinnabar Island’s Pokémon Lab",
-    from: "Super Nerd",
     move: "Power Whip",
+    type: "Grass",
+    location: "Cinnabar Island's Pokémon Lab",
+    from: "Super Nerd",
     price: "$10,000"
   },
   {
-    location: "Cinnabar Island’s Pokémon Lab",
+    move: "High Horsepower",
+    type: "Ground",
+    location: "Cinnabar Island's Pokémon Lab",
     from: "Super Nerd",
-    move: "Hi Horsepower",
     price: "$10,000"
   },
   {
-    location: "Cinnabar Island’s Pokémon Lab",
-    from: "Super Nerd",
     move: "Bug Buzz",
+    type: "Bug",
+    location: "Cinnabar Island's Pokémon Lab",
+    from: "Super Nerd",
     price: "$10,000"
   },
   {
-    location: "Cinnabar Island’s Pokémon Lab",
-    from: "Super Nerd",
     move: "Phantom Force",
+    type: "Ghost",
+    location: "Cinnabar Island's Pokémon Lab",
+    from: "Super Nerd",
     price: "$10,000"
   },
   {
-    location: "Cinnabar Island’s Pokémon Lab",
-    from: "Super Nerd",
     move: "Flare Blitz",
+    type: "Fire",
+    location: "Cinnabar Island's Pokémon Lab",
+    from: "Super Nerd",
     price: "$10,000"
   },
   {
-    location: "Cinnabar Island’s Pokémon Lab",
-    from: "Super Nerd",
     move: "Stored Power",
+    type: "Psychic",
+    location: "Cinnabar Island's Pokémon Lab",
+    from: "Super Nerd",
     price: "$10,000"
   },
   {
-    location: "Cinnabar Island’s Pokémon Lab",
-    from: "Super Nerd",
     move: "Gunk Shot",
+    type: "Poison",
+    location: "Cinnabar Island's Pokémon Lab",
+    from: "Super Nerd",
     price: "$10,000"
   },
   {
-    location: "Cinnabar Island’s Pokémon Lab",
-    from: "Super Nerd",
     move: "Tailwind",
-    price: "$10,000"
-  },
-  {
-    location: "Cinnabar Island’s Pokémon Lab",
+    type: "Flying",
+    location: "Cinnabar Island's Pokémon Lab",
     from: "Super Nerd",
-    move: "Megahorn",
     price: "$10,000"
   },
   {
-    location: "Viridian City",
-    from: "Clair",
-    move: "Draco Meteor",
-    price: "Free"
+    move: "Megahorn",
+    type: "Bug",
+    location: "Cinnabar Island's Pokémon Lab",
+    from: "Super Nerd",
+    price: "$10,000"
   },
   {
-    location: "Victory Road(Near the Exit)",
-    from: "Ace Trainer",
+    move: "Draco Meteor",
+    type: "Dragon",
+    location: "Viridian City's Gym",
+    from: "Clair",
+    price: "Free (Only available after defeating Clair)"
+  },
+  {
     move: "Close Combat",
+    type: "Fighting",
+    location: "Victory Road (near the exit)",
+    from: "Ace Trainer",
     price: "$25,000"
   },
   {
-    location: "Cape Brink",
-    from: "Rachel",
+    move: "Celebrate",
+    type: "Normal",
+    location: "Pallet Town, Player's house",
+    from: "Mom",
+    price: "Free"
+  },
+  {
     move: "Dark Hole",
-    price: "Free (One time)"
+    type: "Dark",
+    location: "Two Island - Cape Brink",
+    from: "Rachel",
+    price: "Free (One time only)"
   },
   {
-    location: "Two Island - Joyful Game Corner",
-    from: "Ace Trainer",
     move: "Frenzy Plant",
+    type: "Grass",
+    location: "Two Island - Joyful Game Corner",
+    from: "Ace Trainer",
     price: "Free"
   },
   {
-    location: "Two Island - Joyful Game Corner",
-    from: "Ace Trainer",
     move: "Hydro Cannon",
-    price: "Free"
-  },
-  {
+    type: "Water",
     location: "Two Island - Joyful Game Corner",
     from: "Ace Trainer",
-    move: "Blast Burn",
     price: "Free"
   },
 ]

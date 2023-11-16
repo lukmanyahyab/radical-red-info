@@ -10,7 +10,7 @@ export default function Home() {
           target="_blank"
           className="text-red-500 hover:underline"
         >
-          Radical Red 3.1
+          Radical Red 4.0
         </Link>{" "}
         with randomized abilities.
       </p>{" "}

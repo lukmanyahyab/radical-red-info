@@ -1,258 +1,380 @@
 export default [
   {
     name: "Venusaurite",
-    location: "Upstairs in the northern-south gate on route 16 from a scientist after showing him a Venusaur"
+    from: "Scientist",
+    location: "Upstairs in the northern-south gate on route 16",
+    requirement: "Show him a Venusaur"
   },
   {
     name: "Charizardite X",
-    location: "Upstairs in the northern-south gate on route 16 from a scientist after showing him a Charizard"
+    from: "Scientist",
+    location: "Upstairs in the northern-south gate on route 16",
+    requirement: "Show him a Charizard",
   },
   {
     name: "Blastoisinite",
-    location: "Upstairs in the northern-south gate on route 16 from a scientist after showing him a Blastoise"
+    from: "Scientist",
+    location: "Upstairs in the northern-south gate on route 16",
+    requirement: "Show him a Blastoise",
   },
   {
     name: "Sceptilite",
-    location: "Upstairs in the northern-south gate on route 16 from a scientist after showing him a Sceptile"
+    from: "Brendan",
+    location: "Route 23",
+    requirement: "Defeat him"
   },
   {
     name: "Blazikenite",
-    location: "Upstairs in the northern-south gate on route 16 from a scientist after showing him a Blaziken"
+    from: "May",
+    location: "Cinnabar Island, in front of the Pokémon Mansion",
+    requirement: "Defeat her"
   },
   {
     name: "Swampertite",
-    location: "Upstairs in the northern-south gate on route 16 from a scientist after showing him a Swampert"
+    from: "Dumbass Kid",
+    location: "Saffron City",
+    requirement: "Defeat and talking to him with a Swampert follower"
   },
   {
     name: "Lucarionite",
-    location: "Upstairs in the northern-south gate on route 16 from a scientist after receiving all 6 Starter Mega Stones from him"
+    from: "A guy with a Lucario",
+    location: "In Celadon City",
+    requirement: "Soul Badge and talk to him with a Lucario follower"
   },
   {
     name: "Alakazite",
-    location: "Celadon City's Department Store, from a little girl on the rooftop"
+    from: "A little girl",
+    location: "Celadon City's Department Store, on the rooftop",
+    requirement: "Talk to her"
   },
   {
     name: "Sablenite",
-    location: "Lavender Town's Pokémon Tower in the 3rd floor, north side of the room"
+    from: "-",
+    location: "Lavender Town's Pokémon Tower in the 3rd floor, north side of the room",
+    requirement: "-"
   },
   {
-    name: "Kangaskanite",
-    location: "Saffron City's Silph Co. 7th floor, in the bottom left part of the floor, near a scientist"
+    name: "Kangaskhanite",
+    from: "-",
+    location: "Saffron City's Silph Co. 7th floor, in the bottom left part of the floor, near a Scientist",
+    requirement: "-"
   },
   {
     name: "Audinite",
-    location: "Saffron City's Silph Co. 6th floor, at the south west part of the floor, near a scientist"
+    from: "-",
+    location: "Saffron City's Silph Co. 6th floor, at the south west part of the floor, near a Scientist",
+    requirement: "-"
   },
   {
     name: "Garbodorite",
-    location: "Saffron City's Silph Co. 4th floor, in the far western room, keycard is required to enter"
+    from: "-",
+    location: "Saffron City's Silph Co. 4th floor, in the far western room",
+    requirement: "Keycard to enter the room"
   },
   {
     name: "Gardevoirite",
-    location: "Saffron City's Gym, from Sabrina after defeating her and showing her a Pokémon with perfect IVs"
+    from: "Sabrina",
+    location: "Saffron City's Gym, ",
+    requirement: "Defeat and show her a Pokémon with 31 IVs in all stats (or a shiny Pokémon in MGM mode)"
   },
   {
     name: "Absolite",
-    location: "Route 17, on the south side near a sign post between two ponds"
+    from: "-",
+    location: "Route 17, on the south side near a sign post between two ponds",
+    requirement: "-"
   },
   {
     name: "Kinglerite",
-    location: "Route 21"
+    from: "-",
+    location: "Route 21, on an islet",
+    requirement: "-"
   },
   {
     name: "Altarianite",
-    location: "Route 18 near the grass with 3 Bird Keepers"
+    from: "-",
+    location: "Route 18, near the grass",
+    requirement: "-"
   },
   {
     name: "Dreadnawite",
-    location: "Route 19, on a small islet on the south side of the route (Surf HM required)"
+    from: "-",
+    location: "Route 19, on a small islet on the south side of the route",
+    requirement: "Surf HM"
   },
   {
     name: "Sharpedonite",
-    location: "Route 12, in the fisherman's house if you show him Sharpedo"
+    from: "Fisherman",
+    location: "Route 12, in a house",
+    requirement: "Talk to him with a Sharpedo follower"
   },
   {
-    name: "Toxitricite",
-    location: "Fuchsia City's gym, from Koga after defeating him and showing him a Pokémon with at least 150 EVs in Speed"
+    name: "Toxtricitite",
+    from: "Koga",
+    location: "Fuchsia City's Gym",
+    requirement: "Defeat and show him a Pokémon with at least 150 EVs in Speed (In MGM mode, you need to show him a Pokémon that has at least 125 base SPE)"
   },
   {
     name: "Heracronite",
-    location: "Safari Zone, Area 1: West-Center"
+    from: "-",
+    location: "Safari Zone, Area 1: West-Center",
+    requirement: "-"
   },
   {
     name: "Lopunnite",
-    location: "Safari Zone, Area 3, at the south side of the area"
+    from: "-",
+    location: "Safari Zone, Area 3, at the south side of the area",
+    requirement: "-"
   },
   {
     name: "Pidgeotite",
-    location: "Safari Zone, Area 2, at the north side of the area"
+    from: "-",
+    location: "Safari Zone, Area 2, at the north side of the area",
+    requirement: "-"
   },
   {
     name: "Beedrilite",
-    location: "Safari Zone Area 2"
+    from: "-",
+    location: "Safari Zone, Area 2, in the eastern part of the area, by going through the heightened platform with a dead end",
+    requirement: "-"
   },
   {
     name: "Glalitite",
-    location: "Route 20, from Pryce after defeating him"
+    from: "Pryce",
+    location: "Route 20 (Fucshia City side), on Seafoam Island entrance",
+    requirement: "Defeat him"
   },
   {
     name: "Abomasite",
-    location: "Seafom Islands B2F, southern part of the floor"
+    from: "-",
+    location: "Seafoam Islands B2F, southern part of the floor",
+    requirement: "-"
   },
   {
     name: "Laprasite",
-    location: "Seafom Islands B2F, north eastern part of the floor"
+    from: "-",
+    location: "Seafoam Islands B2F, north eastern part of the floor",
+    requirement: "-"
   },
   {
     name: "Medichamite",
-    location: "Route 20 (Cinnabar Island side), on a small islet below a stationary female swimmer"
+    from: "-",
+    location: "Route 20 (Cinnabar Island side), on a small islet below a stationary female Swimmer",
+    requirement: "-"
   },
   {
     name: "Latiosite",
-    location: "Cinnabar Island's Pokémon Lab's middle room, from a scientist sitting at the western table, if you show him Latios"
+    from: "Scientist",
+    location: "Cinnabar Island's Pokémon Lab's middle room, sitting at the western table",
+    requirement: "Show him a Latios"
   },
   {
     name: "Latiasite",
-    location: "Cinnabar Island's Pokémon Lab's middle room, from a scientist sitting at the western table, if you show him Latias"
+    from: "Scientist",
+    location: "Cinnabar Island's Pokémon Lab's middle room, sitting at the western table",
+    requirement: "Show him a Latias"
   },
   {
     name: "Aggronite",
-    location: "Cinnabar Island's Pokémon Lab, from Jasmine after defeating her"
+    from: "Jasmine",
+    location: "Cinnabar Island's Pokémon Lab",
+    requirement: "Defeat her"
   },
   {
     name: "Steelixite",
-    location: "Cinnabar Island's Pokémon Lab, from Jasmine after defeating her and showing her a Pokémon with 150 EVs in defense"
+    from: "Jasmine",
+    location: "Cinnabar Island's Pokémon Lab",
+    requirement: "Defeat and show her a Pokémon with 150 EVs in Defense (In MGM mode, you need to show her a Pokémon that has at least 125 base DEF)"
   },
   {
     name: "Cameruptite",
-    location: "Cinnabar Island's Pokémon Mansion 1F, accessed by falling through the hole on 3F"
+    from: "-",
+    location: "Cinnabar Island's Pokémon Mansion 1F, accessed by falling through the hole on 3F",
+    requirement: "-"
   },
   {
     name: "Charizardite Y",
-    location: "Cinnabar Island's Gym, from Blaine after defeating him and showing him a Pokémon with at least 150 EVs in Special Attack"
+    from: "Blaine",
+    location: "Cinnabar Island's Gym",
+    requirement: "Defeat and show him a Pokémon with at least 150 EVs in Special Attack (In MGM mode, you need to show him a Pokémon that has at least 125 base SpA)"
   },
   {
     name: "Tyranitarite",
-    location: "Cerulean Cave 2F, in the north east part of the floor, accessed from north east ladder on 1F"
+    from: "-",
+    location: "Route 24, on a small islet",
+    requirement: "Surf HM"
   },
   {
     name: "Mawilite",
-    location: "Cerulean Cave 1F, from Ariana after defeating her in battle"
+    from: "Ariana",
+    location: "Cerulean Cave 1F",
+    requirement: "Defeat her and Archer"
   },
   {
-    name: "Houndoomite",
-    location: "Cerulean Cave 1F, from Archer after defeating him in battle"
+    name: "Houndoominite",
+    from: "Archer",
+    location: "Cerulean Cave 1F",
+    requirement: "Defeat him and Ariana"
   },
   {
     name: "Mewtwonite Y",
-    location: "Route 4, from Giovanni after defeating him in Cerulean Cave"
+    from: "Giovanni",
+    location: "Cerulean Cave",
+    requirement: "Defeat him"
   },
   {
     name: "Pinsirite",
-    location: "Route 6, south west of the pond"
+    from: "-",
+    location: "Route 6, south west of the pond",
+    requirement: "Surf or Rock Smash HM"
   },
   {
     name: "Ampharosite",
-    location: "Power Plant, in the north east corner"
+    from: "-",
+    location: "Power Plant, in the north east corner",
+    requirement: "-"
   },
   {
     name: "Machampite",
-    location: "Power Plant, from dumbass trainer"
+    from: "Dumbass Jojo Fan",
+    location: "Power Plant",
+    requirement: "Defeat him"
   },
   {
-    name: "Coloassilite",
-    location: "Rock Tunnel"
+    name: "Coalossite",
+    from: "-",
+    location: "Rock Tunnel 1F",
+    requirement: "Rock Smash HM"
   },
   {
     name: "Slowbronite",
-    location: "Route 12, an islet just south of the sleeping Snorlax"
+    from: "-",
+    location: "Route 12, on an islet just south of the sleeping Snorlax",
+    requirement: "Surf HM"
   },
   {
     name: "Salamencite",
-    location: "From Lance in Cerulean Cave"
+    from: "Lance",
+    location: "In front of Cerulean Cave",
+    requirement: "Defeat Giovanni in Cerulean Cave"
   },
   {
-    name: "Doraludite",
-    location: "Viridian City, from Clair after defeating her"
+    name: "Duraludonite",
+    from: "Clair",
+    location: "Viridian City",
+    requirement: "Defeat Her"
   },
   {
     name: "Butterfrite",
-    location: "Viridian Forest (Rock Smash HM required)"
+    from: "-",
+    location: "Viridian Forest",
+    requirement: "Rock Smash HM"
   },
   {
-    name: "Orbitreelite",
-    location: "Route 2, above Diglett's Cave (Rock Smash HM required)"
+    name: "Orbeetlite",
+    from: "-",
+    location: "Route 2, above Diglett's Cave",
+    requirement: "Rock Smash HM"
   },
   {
     name: "Scizorite",
-    location: "Route 22, below the pond and a ledge in the center)"
+    from: "-",
+    location: "Route 22, below the pond and a ledge in the center",
+    requirement: "Surf HM"
   },
   {
     name: "Snorlaxite",
-    location: "Route 23, to the north of the route, above the Volcano badge check gate"
+    from: "-",
+    location: "Route 23, to the north of the route, above the Volcano badge check gate",
+    requirement: "Volcano badge"
   },
   {
     name: "Garchompite",
-    location: "Cerulean Cave"
+    from: "-",
+    location: "Cerulean Cave B1F, in the north east area of the floor",
+    requirement: "-"
   },
   {
     name: "Metagrossite",
-    location: "Indigo Plateau, after defeating Dumbass Creator in front of the Pokémon League"
+    from: "Dumbass Creator",
+    location: "Indigo Plateau",
+    requirement: "Defeat him"
   },
   {
-    name: "Aerodactlite",
-    location: "Pewter City, from Brock after defeating him in a rematch"
+    name: "Aerodactylite",
+    from: "Brock",
+    location: "Pewter City Gym",
+    requirement: "Defeat him in a rematch"
   },
   {
     name: "Gyaradosite",
-    location: "Cerulean City, from Místy after defeating her in a rematch"
+    from: "Misty",
+    location: "Cerulean City Gym",
+    requirement: "Defeat her in a rematch"
   },
   {
     name: "Manectite",
-    location: "From Lt. Surge after defeating him in a rematch"
+    from: "Lt. Surge",
+    location: "Vermilion City Gym",
+    requirement: "Defeat him in a rematch"
   },
   {
     name: "Galladite",
-    location: "Saffron City's Dojo, from Chuck after defeating him and showing him a Pokémon with at least 150 EVs in Attack"
+    from: "Chuck",
+    location: "Saffron City's Dojo",
+    requirement: "Mega Ring, defeat him and show him a Pokémon with at least 150 EVs in Attack (In MGM mode, you need to show him a Pokémon that has at least 125 base ATK)"
   },
   {
     name: "Gengarite",
-    location: "Lavender Town in Fuji's House, From Morty if you show him a Pokémon with max happiness"
+    from: "Morty",
+    location: "Lavender Town in Fuji's House",
+    requirement: "Mega Ring and show him a Pokémon with max happiness"
   },
   {
-    name: "Copperajahite",
-    location: "Vemilion City (Surf HM required)"
+    name: "Copperajite",
+    from: "-",
+    location: "Vemilion City, south of the Gym",
+    requirement: "Surf HM"
   },
   {
-    name: "Centischorchite",
-    location: "Route 8, from an Ace Trainer after defeating him after getting Mega Ring"
+    name: "Centiskite",
+    from: "Ace Trainer Cole",
+    location: "Route 8",
+    requirement: "Mega Ring and defeat him"
   },
   {
-    name: "Sandacondanite",
-    location: "Route 15, from an Ace Trainer after defeating him"
+    name: "Sandacondite",
+    from: "Ace Trainer Haley",
+    location: "Route 15",
+    requirement: "Defeat her"
   },
   {
-    name: "Flapplenite",
-    location: "Celadon City's Hotel after getting Mega Ring"
+    name: "Applite",
+    from: "Two Beauties",
+    location: "Celadon City's Hotel",
+    requirement: "Mega Ring and defeat them"
   },
   {
-    name: "Appletunite",
-    location: "Celadon City's Hotel after getting Mega Ring"
+    name: "Alcremite",
+    from: "A woman",
+    location: "in a Saffron City house",
+    requirement: "Bring her the ingredients for a cake (1x Rawst Berry, 1x Aspear Berry, 2x Moomoo Milk)"
   },
   {
-    name: "Alcremienite",
-    location: "From a girl in Saffron City after getting her ingredients for a cake"
-  },
-  {
-    name: "Banetite",
-    location: "Cinnabar Island's Pokémon Mansion B1F, south western part of the floor"
+    name: "Banettite",
+    from: "-",
+    location: "Cinnabar Island's Pokémon Mansion B1F, south western part of the floor",
+    requirement: "-"
   },
   {
     name: "Diancite",
-    location: "Currently unobtainable"
+    from: "-",
+    location: "Cerulean Cave 2F, in the north east area of the floor, accessed by going up the north east ladder on 1F",
+    requirement: "-"
   },
   {
     name: "Mewtwonite X",
-    location: "Currently unobtainable"
-  },
+    from: "Red",
+    location: "Postgame - One Island, Treasure Beach",
+    requirement: "Defeat him on the beach (Requires 4+ win streak in the Battle Simulator)"
+  }
 ]
