@@ -33,14 +33,14 @@ const TmHm = () => {
     <>
       <Search
         search={search}
-        placeholder="Search for move, type or location... (Shift + Enter)"
+        placeholder="Search for move, type or location..."
         handleSearch={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s]/gi, ""))}
       />
       <Table columns={["Entries", "Moves", "Types", "Locations"]}>
         {rowsData.map((row) => (
           <tr>
             <td>{getText(row.entries)}</td>
-            <td>{getText(row.move)}</td>
+            <td className="w-[15ch]">{getText(row.move)}</td>
             <td>{getText(row.type)}</td>
             <td>{getText(row.location)}</td>
           </tr>

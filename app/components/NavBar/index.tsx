@@ -11,6 +11,7 @@ const NavBar = () => {
     { href: "/tmhm", name: "TM & HM" },
     { href: "/mega-stones", name: "Mega Stones" },
     { href: "/tutor", name: "Move Tutor" },
+    { href: "/items", name: "Items" },
   ];
 
   return (

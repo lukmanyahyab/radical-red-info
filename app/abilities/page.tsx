@@ -27,12 +27,6 @@ const Abilities: React.FC = () => {
   useEffect(() => {
     const pokemons = localStorage.getItem("pokemons") || "[]"; // Get Pokemon From Local Storage
     if (pokemons.length > 2) setRows(JSON.parse(pokemons)); // Set Table Rows From Local Storage
-
-    document.addEventListener("keypress", function (e) {
-      if (e.shiftKey && e.key == "Enter") {
-        document.getElementById("search")?.focus();
-      }
-    });
   }, []);
 
   useEffect(() => {
@@ -158,7 +152,7 @@ const Abilities: React.FC = () => {
       </Form>
       <Search
         search={search}
-        placeholder="Search for species or ability... (Shift + Enter)"
+        placeholder="Search for species or ability..."
         handleSearch={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s]/gi, ""))}
       />
       {rows.length ? (
