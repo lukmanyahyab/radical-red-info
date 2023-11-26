@@ -35,7 +35,7 @@ const MegaStones = () => {
       <Search
         search={search}
         placeholder="Search for stone or location..."
-        handleSearch={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s]/gi, ""))}
+        handleSearch={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s-]/gi, ""))}
       />
       <Table columns={["Stones", "From", "Locations", "Requirements"]}>
         {rowsData.map((row) => (

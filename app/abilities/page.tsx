@@ -153,7 +153,7 @@ const Abilities: React.FC = () => {
       <Search
         search={search}
         placeholder="Search for species or ability..."
-        handleSearch={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s]/gi, ""))}
+        handleSearch={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s-]/gi, ""))}
       />
       {rows.length ? (
         <Table columns={["#", "Species", "Regular Ability", "Hidden Ability", "Options"]}>

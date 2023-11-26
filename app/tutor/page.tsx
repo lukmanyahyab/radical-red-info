@@ -35,7 +35,7 @@ const Tutor = () => {
       <Search
         search={search}
         placeholder="Search for move, type or location..."
-        handleSearch={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s]/gi, ""))}
+        handleSearch={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s-]/gi, ""))}
       />
       <Table columns={["Moves", "Types", "From", "Locations", "Prices"]}>
         {rowsData.map((row) => (

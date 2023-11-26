@@ -1,6 +1,7 @@
 export default [
   {
-    name: "Viridian City", items: [
+    name: "Viridian City",
+    items: [
       {
         id: 1,
         name: "Wise Glasses x1",

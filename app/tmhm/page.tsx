@@ -34,7 +34,7 @@ const TmHm = () => {
       <Search
         search={search}
         placeholder="Search for move, type or location..."
-        handleSearch={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s]/gi, ""))}
+        handleSearch={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s-]/gi, ""))}
       />
       <Table columns={["Entries", "Moves", "Types", "Locations"]}>
         {rowsData.map((row) => (
