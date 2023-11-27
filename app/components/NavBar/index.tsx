@@ -15,11 +15,18 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="bg-white text-black p-2 mb-4 relative w-fit m-auto rounded-b-2xl">
-      <ul className="flex gap-8 justify-center [&>*:hover]:bg-slate-200 [&>*]:py-1 [&>*]:px-2 [&>*]:transition [&>*]:duration-200 [&>*]:rounded [&>*]:font-semibold">
+    <nav className="bg-white text-black p-2 mb-4 relative w-fit m-auto rounded-b-xl">
+      <ul className="flex gap-6 justify-center">
         {links.map((link, i) => (
-          <li className={pathname == link.href ? "bg-slate-200" : ""} key={i}>
-            <Link href={link.href}>{link.name}</Link>
+          <li key={i}>
+            <Link
+              href={link.href}
+              className={`${
+                pathname == link.href ? "bg-slate-600 text-white pointer-events-none" : ""
+              } px-2 py-[1px] border-2 rounded-lg border-slate-600 hover:bg-slate-300 transition font-semibold`}
+            >
+              {link.name}
+            </Link>
           </li>
         ))}
       </ul>

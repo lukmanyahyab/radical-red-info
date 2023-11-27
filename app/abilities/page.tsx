@@ -104,52 +104,54 @@ const Abilities: React.FC = () => {
 
   return (
     <>
-      <button
-        className="absolute right-4 top-4 bg-red-500 hover:bg-red-600 text-white p-2 rounded-xl"
-        onClick={() => (confirm("Are you sure?") ? setRows([]) : null)}
-      >
-        Delete All
-      </button>
-      <Form handleSubmit={handleSubmit}>
-        <Input
-          label="Species"
-          list="species"
-          name="species"
-          handleChange={handleChange}
-          handleFocusOut={handleFocusOut}
-          placeholder="Pokemon's name..."
-          value={form.species}
-          required
-        />
-        <Input
-          label="Regular Ability"
-          list="abilities"
-          name="regular"
-          handleChange={handleChange}
-          handleFocusOut={handleFocusOut}
-          placeholder="ex: Huge Power"
-          value={form.regular}
-          required={false}
-        />
-        <Input
-          label="Hidden Ability"
-          list="abilities"
-          name="hidden"
-          handleChange={handleChange}
-          handleFocusOut={handleFocusOut}
-          placeholder="ex: Feline Prowess"
-          value={form.hidden}
-          required={false}
-        />
-        <Button
-          handleClick={handleClick}
-          style={{ bg: "bg-green-600", hover: "hover:bg-green-700" }}
+      <div className="relative">
+        <button
+          className="absolute right-0 bottom-0 bg-red-500 hover:bg-red-600 text-white py-[0.25rem] px-3 rounded-lg"
+          onClick={() => (confirm("Are you sure?") ? setRows([]) : null)}
         >
-          Add
-        </Button>
-        <DataList data={abilities} id="abilities" />
-        <DataList data={species} id="species" />
-      </Form>
+          Delete All
+        </button>
+        <Form handleSubmit={handleSubmit}>
+          <Input
+            label="Species"
+            list="species"
+            name="species"
+            handleChange={handleChange}
+            handleFocusOut={handleFocusOut}
+            placeholder="Pokemon's name..."
+            value={form.species}
+            required
+          />
+          <Input
+            label="Regular Ability"
+            list="abilities"
+            name="regular"
+            handleChange={handleChange}
+            handleFocusOut={handleFocusOut}
+            placeholder="ex: Huge Power"
+            value={form.regular}
+            required={false}
+          />
+          <Input
+            label="Hidden Ability"
+            list="abilities"
+            name="hidden"
+            handleChange={handleChange}
+            handleFocusOut={handleFocusOut}
+            placeholder="ex: Feline Prowess"
+            value={form.hidden}
+            required={false}
+          />
+          <Button
+            handleClick={handleClick}
+            style={{ bg: "bg-green-600", hover: "hover:bg-green-700" }}
+          >
+            Add
+          </Button>
+          <DataList data={abilities} id="abilities" />
+          <DataList data={species} id="species" />
+        </Form>
+      </div>
       <Search
         search={search}
         placeholder="Search for species or ability..."

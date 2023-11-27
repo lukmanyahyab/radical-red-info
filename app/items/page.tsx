@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import locationsData from "./data/locations";
+import Search from "../components/Search";
 
 type Item = {
   id: number;
@@ -18,6 +19,7 @@ type Location = {
 const Items = () => {
   const [data, setData] = useState<Location[]>(locationsData);
   const [showObtained, setShowObtained] = useState(false);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     const obtainedIds = localStorage.getItem("obtained") || "[]";
@@ -60,10 +62,42 @@ const Items = () => {
   let locations = data;
 
   if (!showObtained) {
-    locations = locations.map((location) => {
-      return { name: location.name, items: location.items.filter((item) => !item.obtained) };
-    });
-    locations = locations.filter((location) => location.items.length);
+    locations = locations
+      .map((location) => ({
+        name: location.name,
+        items: location.items.filter((item) => !item.obtained),
+      }))
+      .filter((location) => location.items.length);
+  }
+
+  if (search) {
+    const keyword = new RegExp(search, "i");
+    locations = locations
+      .map((location) => ({
+        name: location.name,
+        items: location.items.filter(
+          (item) => keyword.test(item.name) || keyword.test(location.name)
+        ),
+      }))
+      .filter((location) => location.items.length);
+  }
+
+  function getText(text: string) {
+    const parts = text.split(new RegExp(`(${search})`, "gi"));
+    return (
+      <>
+        {parts.map((part, i) => {
+          const isHighlight = i % 2 === 1;
+          if (isHighlight)
+            return (
+              <span key={i} className="bg-yellow-300">
+                {part}
+              </span>
+            );
+          else return part;
+        })}
+      </>
+    );
   }
 
   const rows = locations.map((location, i) => (
@@ -74,7 +108,7 @@ const Items = () => {
       <thead>
         <tr>
           <th className="font-bold text-lg text-black" colSpan={2}>
-            {location.name}
+            {getText(location.name)}
           </th>
         </tr>
       </thead>
@@ -89,7 +123,7 @@ const Items = () => {
                 onChange={() => handleChange(item.id)}
                 checked={item.obtained}
               />
-              <span>{item.name}</span>
+              <span>{getText(item.name)}</span>
             </td>
             <td>
               <span className="font-medium">{item.detail}</span>
@@ -102,27 +136,34 @@ const Items = () => {
 
   return (
     <>
-      <div className="float-right">
-        <button
-          className={`p-2 mb-2 rounded-lg ${
-            showObtained ? "bg-red-500 hover:bg-red-600" : "bg-blue-500 hover:bg-blue-600"
-          }`}
-          onClick={() => setShowObtained(!showObtained)}
-        >
-          {showObtained ? "Hide Obtained Items" : "Show Obtained Items"}
-        </button>
-        <button
-          className="bg-red-500 p-2 ml-2 rounded-lg hover:bg-red-600"
-          onClick={() => {
-            if (!confirm("Are you sure want to reset?")) return;
-            localStorage.setItem("obtained", "[]");
-            setData(locationsData);
-          }}
-        >
-          Reset
-        </button>
+      <div className="relative">
+        <div className="absolute right-0">
+          <button
+            className={`px-2 py-1 rounded-lg ${
+              showObtained ? "bg-red-500 hover:bg-red-600" : "bg-blue-500 hover:bg-blue-600"
+            }`}
+            onClick={() => setShowObtained(!showObtained)}
+          >
+            {showObtained ? "Hide Obtained Items" : "Show Obtained Items"}
+          </button>
+          <button
+            className="bg-red-500 px-2 py-1 ml-2 rounded-lg hover:bg-red-600"
+            onClick={() => {
+              if (!confirm("Are you sure want to reset?")) return;
+              localStorage.setItem("obtained", "[]");
+              setData(locationsData);
+            }}
+          >
+            Reset
+          </button>
+        </div>
+        <Search
+          search={search}
+          placeholder="Search for item or location..."
+          handleSearch={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s-]/gi, ""))}
+        />
+        {rows}
       </div>
-      {rows}
     </>
   );
 };

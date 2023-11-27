@@ -26,21 +26,8 @@ export default [
         detail: "At the other side of the small pond (Surf HM required)",
         obtained: false,
       },
-      {
-        id: 5,
-        name: "TM059 - Dragon Pulse",
-        detail: "From Clair after defeating her",
-        obtained: false,
-      },
-      {
-        id: 6,
-        name: "Duraludonite",
-        detail: "From Clair after defeating her",
-        obtained: false,
-      }
     ]
-  }
-  ,
+  },
   {
     name: "Route 22",
     items: [
@@ -51,8 +38,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Route 2",
     items: [
@@ -75,8 +61,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Viridian Forest",
     items: [
@@ -99,8 +84,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Diglett's Cave (Near Pewter City)",
     items: [
@@ -111,38 +95,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
-  {
-    name: "Pewter City",
-    items: [
-      {
-        id: 15,
-        name: "TM051 - Roost",
-        detail: "From Falkner in the museum after defeating him",
-        obtained: false,
-      },
-      {
-        id: 16,
-        name: "TM039 - Rock Tomb",
-        detail: "From Brock after defeating him",
-        obtained: false,
-      },
-      {
-        id: 17,
-        name: "Aerodactylite",
-        detail: "Requires Mega Ring - From Brock after defeating him in a rematch",
-        obtained: false,
-      },
-      {
-        id: 18,
-        name: "TM071 - Stone Edge",
-        detail: "Requires Mega Ring - From Brock after defeating him in a rematch",
-        obtained: false,
-      }
-    ]
-  }
-  ,
+  },
   {
     name: "Route 3",
     items: [
@@ -153,8 +106,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Mt. Moon (the top floor accessed from route 4)",
     items: [
@@ -171,8 +123,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Mt. Moon (the room accessed from the second ladder through the tunnel with kable rocks)",
     items: [
@@ -183,8 +134,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Mt. Moon basement (accessed from the third ladder)",
     items: [
@@ -195,8 +145,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Route 4 (East Side)",
     items: [
@@ -212,21 +161,8 @@ export default [
         detail: "Right from the two Black Belts, in between the multiple ledges",
         obtained: false,
       },
-      {
-        id: 26,
-        name: "Mewtwonite Y",
-        detail: "From Giovanni after defeating him in Cerulean Cave",
-        obtained: false,
-      },
-      {
-        id: 27,
-        name: "Salamencite",
-        detail: "From Lance after defeating Giovanni in Cerulean Cave",
-        obtained: false,
-      }
     ]
-  }
-  ,
+  },
   {
     name: "Cerulean City",
     items: [
@@ -236,27 +172,8 @@ export default [
         detail: "In the groomer's garden, in the 3rd flower",
         obtained: false,
       },
-      {
-        id: 29,
-        name: "TM003 - Flip Turn",
-        detail: "From Misty after defeating her",
-        obtained: false,
-      },
-      {
-        id: 30,
-        name: "TM028 - Dig",
-        detail: "From a Team Rocket Grunt behind the north eastern house",
-        obtained: false,
-      },
-      {
-        id: 31,
-        name: "Gyaradosite",
-        detail: "Requires Mega Ring - From Misty after defeating her in a rematch",
-        obtained: false,
-      }
     ]
-  }
-  ,
+  },
   {
     name: "Route 24",
     items: [
@@ -279,8 +196,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Route 25",
     items: [
@@ -297,8 +213,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Route 5",
     items: [
@@ -309,8 +224,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Route 6",
     items: [
@@ -327,8 +241,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Vermilion City",
     items: [
@@ -344,21 +257,8 @@ export default [
         detail: "Below the gym (Surf HM required)",
         obtained: false,
       },
-      {
-        id: 42,
-        name: "TM092 - Volt Switch",
-        detail: "From Lt. Surge after defeating him once",
-        obtained: false,
-      },
-      {
-        id: 43,
-        name: "Manectite",
-        detail: "Requires Mega Ring - From Lt. Surge after defeating him in a rematch",
-        obtained: false,
-      }
     ]
-  }
-  ,
+  },
   {
     name: "Route 11",
     items: [
@@ -381,8 +281,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "S.S. Anne",
     items: [
@@ -398,15 +297,8 @@ export default [
         detail: "Second floor's third room from the right with Gentleman and Lass inside",
         obtained: false,
       },
-      {
-        id: 49,
-        name: "HM01 - Cut",
-        detail: "Captain's room, given to you by the Captain himself",
-        obtained: false,
-      }
     ]
-  }
-  ,
+  },
   {
     name: "Diglett's Cave (main one)",
     items: [
@@ -417,8 +309,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Route 9",
     items: [
@@ -429,8 +320,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Route 10",
     items: [
@@ -447,8 +337,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Rock Tunnel",
     items: [
@@ -477,8 +366,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Lavender Town",
     items: [
@@ -501,8 +389,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Route 12 (Upper area, up until the sleeping Snorlax)",
     items: [
@@ -519,8 +406,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Route 8",
     items: [
@@ -543,8 +429,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Underground Path (Route 8 - Route 7)",
     items: [
@@ -555,8 +440,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Route 7",
     items: [
@@ -567,8 +451,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Celadon City",
     items: [
@@ -603,18 +486,6 @@ export default [
         obtained: false,
       },
       {
-        id: 73,
-        name: "TM019 - Giga Drain",
-        detail: "From Erika after defeating her",
-        obtained: false,
-      },
-      {
-        id: 74,
-        name: "TM086 - Grass Knot",
-        detail: "Requires Mega Ring - From Erika after defeating her in a rematch (Requires a medicine for her Gloom in Fuchsia City)",
-        obtained: false,
-      },
-      {
         id: 75,
         name: "TM117 - Brave Bird",
         detail: "In the hotel, after getting Mega Ring and defeating some folks in there",
@@ -633,8 +504,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Rocket Hideout below Celadon City's Game Corner",
     items: [
@@ -657,8 +527,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Pokémon Tower",
     items: [
@@ -680,15 +549,8 @@ export default [
         detail: "6F, in the north western part of the room (Rock Smash HM Required)",
         obtained: false,
       },
-      {
-        id: 84,
-        name: "Thick Club x1",
-        detail: "Requires Silph Scope - 6F, dropped from the Marowak boss after defeating it",
-        obtained: false,
-      }
     ]
-  }
-  ,
+  },
   {
     name: "Saffron City",
     items: [
@@ -708,18 +570,6 @@ export default [
         id: 87,
         name: "Expert Belt x1",
         detail: "From Chuck after defeating him in the Dojo",
-        obtained: false,
-      },
-      {
-        id: 88,
-        name: "TM116 - Trick Room",
-        detail: "Regular mode only - From Sabrina after defeating her",
-        obtained: false,
-      },
-      {
-        id: 89,
-        name: "TM104 - Psyshock",
-        detail: "Hardcore mode only - From Sabrina after defeating her",
         obtained: false,
       },
       {
@@ -765,8 +615,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Silph Co.",
     items: [
@@ -843,8 +692,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Route 16",
     items: [
@@ -879,8 +727,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Route 17",
     items: [
@@ -903,8 +750,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Route 18",
     items: [
@@ -915,8 +761,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Route 12 (From the point where you wake up Snorlax and go towards south)",
     items: [
@@ -939,8 +784,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Route 13",
     items: [
@@ -957,8 +801,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Route 14",
     items: [
@@ -969,8 +812,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Route 15",
     items: [
@@ -1005,8 +847,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Fuchsia City",
     items: [
@@ -1023,12 +864,6 @@ export default [
         obtained: false,
       },
       {
-        id: 131,
-        name: "TM036 - Sludge Bomb",
-        detail: "From Koga after defeating him",
-        obtained: false,
-      },
-      {
         id: 132,
         name: "Life Orb x1",
         detail: "From Koga after showing him a Pokémon with at least 150 EV in speed (or at least 125 base SPE in MGM/Hardcore mode)",
@@ -1041,20 +876,13 @@ export default [
         obtained: false,
       },
       {
-        id: 134,
-        name: "HM06 - Rock Smash",
-        detail: "From Brendan after defeating him in front of Safari Zone's entrance",
-        obtained: false,
-      },
-      {
         id: 135,
         name: "HM04 - Strength",
         detail: "From Warden, in his house next to the Fisherman's house after giving him his Gold Teeth",
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Safari Zone",
     items: [
@@ -1131,8 +959,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Route 19",
     items: [
@@ -1143,8 +970,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Route 20 (Fuchsia City side, Surf HM required to reach all of these)",
     items: [
@@ -1161,8 +987,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Seafoam Islands (Surf HM and Strength HM required to reach all of these)",
     items: [
@@ -1185,8 +1010,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Route 20 (Cinnabar Island side, Surf HM required to reach all of these)",
     items: [
@@ -1203,8 +1027,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Cinnabar Island (Surf HM required to reach all of these)",
     items: [
@@ -1263,18 +1086,6 @@ export default [
         obtained: false,
       },
       {
-        id: 165,
-        name: "Blazikenite",
-        detail: "From May after you defeat her in front of the Pokémon Mansion",
-        obtained: false,
-      },
-      {
-        id: 166,
-        name: "TM038 - Fire Blast",
-        detail: "From Blaine after defeating him",
-        obtained: false,
-      },
-      {
         id: 167,
         name: "Charizardite Y/X",
         detail: "From Blaine after defeating him and showing him a Pokémon with at least 150 EVs in Special Attack (or at least 125 base SpA in MGM/Hardcore mode ; X in Hardcore mode)",
@@ -1287,8 +1098,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Pokémon Mansion (Surf HM required to reach all of these)",
     items: [
@@ -1323,8 +1133,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Route 21 (Surf HM required to reach all of these)",
     items: [
@@ -1335,8 +1144,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Cerulean Cave",
     items: [
@@ -1383,8 +1191,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Power Plant (Surf HM required to reach this place)",
     items: [
@@ -1425,8 +1232,7 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
+  },
   {
     name: "Route 23 (Surf HM required for all but the first item)",
     items: [
@@ -1436,21 +1242,8 @@ export default [
         detail: "In the north east corner of the Volcano badge check gate",
         obtained: false,
       },
-      {
-        id: 189,
-        name: "Destiny Knot x1",
-        detail: "From Brendan after defeating him in front of Victory Road's entrance",
-        obtained: false,
-      },
-      {
-        id: 190,
-        name: "Sceptilite",
-        detail: "From Brendan after defeating him in front of Victory Road's entrance",
-        obtained: false,
-      }
     ]
-  }
-  ,
+  },
   {
     name: "Victory Road (Strength HM required for all of these)",
     items: [
@@ -1485,18 +1278,6 @@ export default [
         obtained: false,
       }
     ]
-  }
-  ,
-  {
-    name: "Indigo Plateau",
-    items: [
-      {
-        id: 196,
-        name: "Metagrossite",
-        detail: "From the Dumbass Creator after defeating him in front of the Pokémon League entrance",
-        obtained: false,
-      }
-    ]
-  }
+  },
 
 ]
