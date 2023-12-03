@@ -8,8 +8,8 @@ const Table = ({ columns, children }: Props) => {
     <table className="border-collapse bg-white text-black rounded-lg overflow-hidden m-auto">
       <thead>
         <tr>
-          {columns.map((column) => (
-            <th>{column}</th>
+          {columns.map((column, i) => (
+            <th key={i}>{column}</th>
           ))}
         </tr>
       </thead>

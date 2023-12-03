@@ -38,8 +38,8 @@ const MegaStones = () => {
         handleSearch={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s-]/gi, ""))}
       />
       <Table columns={["Stones", "From", "Locations", "Requirements"]}>
-        {rowsData.map((row) => (
-          <tr>
+        {rowsData.map((row, i) => (
+          <tr key={i}>
             <td>{getText(row.name)}</td>
             <td className="w-[18ch]">{row.from}</td>
             <td>{getText(row.location)}</td>

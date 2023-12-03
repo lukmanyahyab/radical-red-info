@@ -37,8 +37,8 @@ const TmHm = () => {
         handleSearch={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s-]/gi, ""))}
       />
       <Table columns={["Entries", "Moves", "Types", "Locations"]}>
-        {rowsData.map((row) => (
-          <tr>
+        {rowsData.map((row, i) => (
+          <tr key={i}>
             <td>{getText(row.entries)}</td>
             <td className="w-[15ch]">{getText(row.move)}</td>
             <td>{getText(row.type)}</td>

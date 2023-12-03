@@ -38,8 +38,8 @@ const Tutor = () => {
         handleSearch={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s-]/gi, ""))}
       />
       <Table columns={["Moves", "Types", "From", "Locations", "Prices"]}>
-        {rowsData.map((row) => (
-          <tr>
+        {rowsData.map((row, i) => (
+          <tr key={i}>
             <td>{getText(row.move)}</td>
             <td>{getText(row.type)}</td>
             <td>{row.from}</td>
