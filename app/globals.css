@@ -54,7 +54,7 @@ select {
   font-size: 1rem;
 }
 
-tr:hover:not(.no-hover) {
+tr:hover:not(.item-row) {
   background-color: #eaeaea;
 }
 

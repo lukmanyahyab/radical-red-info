@@ -125,7 +125,7 @@ export default [
     ]
   },
   {
-    name: "Mt. Moon (the room accessed from the second ladder through the tunnel with kable rocks)",
+    name: "Mt. Moon (accessed from the second ladder through the tunnel with rocks)",
     items: [
       {
         id: 22,

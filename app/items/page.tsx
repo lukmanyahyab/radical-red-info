@@ -102,31 +102,33 @@ const Items = () => {
 
   const rows = locations.map((location, i) => (
     <table
-      className="mb-2 w-full border-collapse bg-white text-black rounded-lg overflow-hidden"
+      className="mb-2 w-full border-collapse bg-white text-black rounded-b-lg overflow-hidden"
       key={i}
     >
-      <thead>
-        <tr>
-          <th className="font-bold text-lg text-black" colSpan={2}>
-            {getText(location.name)}
-          </th>
-        </tr>
-      </thead>
+      <caption className="font-bold text-lg text-white border rounded-t-lg">
+        {getText(location.name)}
+      </caption>
       {location.items.map((item, i) => (
         <tbody key={i}>
-          <tr className={`${item.obtained ? "bg-green-300" : ""} text-black no-hover`}>
+          <tr
+            className={`${
+              item.obtained ? "bg-green-300" : ""
+            } text-black item-row hover:bg-green-300`}
+          >
             <td className="w-[24ch]">
-              <input
-                type="checkbox"
-                name="complete"
-                className="mr-2"
-                onChange={() => handleChange(item.id)}
-                checked={item.obtained}
-              />
-              <span>{getText(item.name)}</span>
+              <label className="cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="complete"
+                  className="mr-2 cursor-pointer"
+                  onChange={() => handleChange(item.id)}
+                  checked={item.obtained}
+                />
+                {getText(item.name)}
+              </label>
             </td>
             <td>
-              <span className="font-medium">{item.detail}</span>
+              <label className="font-medium">{item.detail}</label>
             </td>
           </tr>
         </tbody>
@@ -140,14 +142,14 @@ const Items = () => {
         <div className="absolute right-0">
           <button
             className={`px-2 py-1 rounded-lg ${
-              showObtained ? "bg-red-500 hover:bg-red-600" : "bg-blue-500 hover:bg-blue-600"
+              showObtained ? "bg-red-600 hover:bg-red-700" : "bg-blue-600 hover:bg-blue-700"
             }`}
             onClick={() => setShowObtained(!showObtained)}
           >
             {showObtained ? "Hide Obtained Items" : "Show Obtained Items"}
           </button>
           <button
-            className="bg-red-500 px-2 py-1 ml-2 rounded-lg hover:bg-red-600"
+            className="bg-red-600 px-2 py-1 ml-2 rounded-lg hover:bg-red-700"
             onClick={() => {
               if (!confirm("Are you sure want to reset?")) return;
               localStorage.setItem("obtained", "[]");

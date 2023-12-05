@@ -10,6 +10,7 @@ import Button from "../components/Abilities/Button";
 import DataList from "../components/Abilities/DataList";
 import abilities from "@/app/abilities/data/abilities";
 import species from "@/app/abilities/data/species";
+import Dialog from "../components/Abilities/Dialog";
 
 type FormState = {
   id: number;
@@ -21,7 +22,7 @@ type FormState = {
 const Abilities: React.FC = () => {
   const [form, setForm] = useState<FormState>({ id: -1, species: "", regular: "", hidden: "" });
   const [rows, setRows] = useState<FormState[]>([]);
-  const [openModal, setOpenModal] = useState<boolean>(false);
+  const [openModal, setOpenModal] = useState<string>("");
   const [search, setSearch] = useState<string>("");
 
   useEffect(() => {
@@ -31,7 +32,6 @@ const Abilities: React.FC = () => {
 
   useEffect(() => {
     localStorage.setItem("pokemons", JSON.stringify(rows)); // Update Local Storage If Rows Changes
-    document.getElementsByName("species")[0].focus();
   }, [rows]);
 
   function generateId() {
@@ -65,13 +65,13 @@ const Abilities: React.FC = () => {
       ]);
     }
     setForm({ id: -1, species: "", regular: "", hidden: "" });
-    setOpenModal(false);
+    setOpenModal("");
   }
 
   function handleEdit(id: number) {
     const pokemon = rows.find((row) => row.id == id);
     setForm(pokemon || form);
-    setOpenModal(true);
+    setOpenModal("Edit");
   }
 
   function handleDelete(id: number) {
@@ -86,7 +86,7 @@ const Abilities: React.FC = () => {
     if (target.innerText === "Cancel") {
       e.preventDefault();
       setForm({ id: -1, species: "", regular: "", hidden: "" });
-      setOpenModal(false);
+      setOpenModal("");
     }
   }
 
@@ -104,13 +104,38 @@ const Abilities: React.FC = () => {
 
   return (
     <>
-      <div className="relative">
+      <div className="flex justify-center gap-4 mb-4">
         <button
-          className="absolute right-0 bottom-0 bg-red-500 hover:bg-red-600 text-white py-[0.25rem] px-3 rounded-lg"
+          className="bg-green-700 hover:bg-green-800 text-white py-[0.25rem] px-3 rounded-lg"
+          onClick={() => setOpenModal("Add")}
+        >
+          Add Pokemon
+        </button>
+        <button
+          className="bg-red-600 hover:bg-red-700 text-white py-[0.25rem] px-3 rounded-lg"
           onClick={() => (confirm("Are you sure?") ? setRows([]) : null)}
         >
           Delete All
         </button>
+      </div>
+      <Search
+        search={search}
+        placeholder="Search for species or ability..."
+        handleSearch={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s-]/gi, ""))}
+      />
+      {rows.length ? (
+        <Table columns={["#", "Species", "Regular Ability", "Hidden Ability", "Options"]}>
+          <TableRows
+            rows={rows}
+            handleDelete={handleDelete}
+            handleEdit={handleEdit}
+            search={search}
+          />
+        </Table>
+      ) : (
+        <h1 className="m-auto text-center font-bold rounded bg-red-600 max-w-xs">No Entries</h1>
+      )}
+      <Dialog open={openModal === "Add"} title="Add">
         <Form handleSubmit={handleSubmit}>
           <Input
             label="Species"
@@ -144,86 +169,62 @@ const Abilities: React.FC = () => {
           />
           <Button
             handleClick={handleClick}
-            style={{ bg: "bg-green-600", hover: "hover:bg-green-700" }}
+            style={{ bg: "bg-green-700", hover: "hover:bg-green-800" }}
           >
             Add
+          </Button>
+          <Button handleClick={handleClick} style={{ bg: "bg-red-600", hover: "hover:bg-red-700" }}>
+            Cancel
           </Button>
           <DataList data={abilities} id="abilities" />
           <DataList data={species} id="species" />
         </Form>
-      </div>
-      <Search
-        search={search}
-        placeholder="Search for species or ability..."
-        handleSearch={(e) => setSearch(e.target.value.replace(/[^a-z0-9\s-]/gi, ""))}
-      />
-      {rows.length ? (
-        <Table columns={["#", "Species", "Regular Ability", "Hidden Ability", "Options"]}>
-          <TableRows
-            rows={rows}
-            handleDelete={handleDelete}
-            handleEdit={handleEdit}
-            search={search}
+      </Dialog>
+      {/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */}
+      <Dialog open={openModal === "Edit"} title="Edit">
+        <Form handleSubmit={handleSubmit}>
+          <input type="hidden" name="id" value={form.id} />
+          <Input
+            label="Species"
+            list="species"
+            name="species"
+            handleChange={handleChange}
+            handleFocusOut={handleFocusOut}
+            placeholder="Pokemon's name..."
+            value={form.species}
+            required
           />
-        </Table>
-      ) : (
-        <h1 className="m-auto text-center font-bold rounded bg-red-600 max-w-xs">No Entries</h1>
-      )}
-
-      <div
-        className="fixed inset-0 bg-slate-900/80 flex items-center backdrop-FocusOut-sm"
-        style={{ display: openModal ? "flex" : "none" }}
-      >
-        <dialog open={openModal} className="mb-[10%] p-2 bg-[#cacaca] rounded-lg">
-          <h2 className="mt-0 text-center font-bold text-xl">Edit Pokemon</h2>
-          <hr className="my-2 bg-white h-1" />
-          <Form handleSubmit={handleSubmit}>
-            <input type="hidden" name="id" value={form.id} />
-            <Input
-              label="Species"
-              list="species"
-              name="species"
-              handleChange={handleChange}
-              handleFocusOut={handleFocusOut}
-              placeholder="Pokemon's name..."
-              value={form.species}
-              required
-            />
-            <Input
-              label="Regular Ability"
-              list="abilities"
-              name="regular"
-              handleChange={handleChange}
-              handleFocusOut={handleFocusOut}
-              placeholder="ex: Huge Power"
-              value={form.regular}
-              required={false}
-            />
-            <Input
-              label="Hidden Ability"
-              list="abilities"
-              name="hidden"
-              handleChange={handleChange}
-              handleFocusOut={handleFocusOut}
-              placeholder="ex: Feline Prowess"
-              value={form.hidden}
-              required={false}
-            />
-            <Button
-              handleClick={handleClick}
-              style={{ bg: "bg-green-600", hover: "hover:bg-green-700" }}
-            >
-              Change
-            </Button>
-            <Button
-              handleClick={handleClick}
-              style={{ bg: "bg-red-600", hover: "hover:bg-red-700" }}
-            >
-              Cancel
-            </Button>
-          </Form>
-        </dialog>
-      </div>
+          <Input
+            label="Regular Ability"
+            list="abilities"
+            name="regular"
+            handleChange={handleChange}
+            handleFocusOut={handleFocusOut}
+            placeholder="ex: Huge Power"
+            value={form.regular}
+            required={false}
+          />
+          <Input
+            label="Hidden Ability"
+            list="abilities"
+            name="hidden"
+            handleChange={handleChange}
+            handleFocusOut={handleFocusOut}
+            placeholder="ex: Feline Prowess"
+            value={form.hidden}
+            required={false}
+          />
+          <Button
+            handleClick={handleClick}
+            style={{ bg: "bg-green-700", hover: "hover:bg-green-800" }}
+          >
+            Change
+          </Button>
+          <Button handleClick={handleClick} style={{ bg: "bg-red-600", hover: "hover:bg-red-700" }}>
+            Cancel
+          </Button>
+        </Form>
+      </Dialog>
     </>
   );
 };

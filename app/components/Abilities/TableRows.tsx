@@ -13,8 +13,8 @@ type Props = {
 };
 
 function getStyle(ability: string) {
-  if (!ability || ability.match(/(None|Unknown)/i)) return "text-red-600";
-  return "text-green-600";
+  if (!ability || ability.match(/(None|Unknown)/i)) return "text-red-700";
+  return "text-green-800";
 }
 
 const TableRows = ({ rows, handleDelete, handleEdit, search }: Props) => {
@@ -49,7 +49,7 @@ const TableRows = ({ rows, handleDelete, handleEdit, search }: Props) => {
           <td>{getText(row.species)}</td>
           <td className={getStyle(row.regular)}>{getText(row.regular)}</td>
           <td className={getStyle(row.hidden)}>{getText(row.hidden)}</td>
-          <td className="flex gap-4 justify-center border-0 [&>*]:basis-1/2 [&>*]:border-0 [&>*]:rounded-lg [&>*]:text-white [&>*]:h-6 [&>*]:transition [&>*]:duration-300">
+          <td className="flex justify-center border-0 [&>*]:basis-1/2 [&>*]:border-0 [&>*]:rounded-lg [&>*]:text-white [&>*]:h-6 [&>*]:transition [&>*]:duration-300">
             <button
               className="bg-blue-600 hover:bg-blue-700 scale-90 px-2"
               onClick={() => handleEdit(row.id)}
@@ -57,7 +57,7 @@ const TableRows = ({ rows, handleDelete, handleEdit, search }: Props) => {
               Change
             </button>
             <button
-              className="bg-red-500 hover:bg-red-600 scale-90 px-2"
+              className="bg-red-600 hover:bg-red-700 scale-90 px-2"
               onClick={() => handleDelete(row.id)}
             >
               Delete
